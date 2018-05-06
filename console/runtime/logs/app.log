@@ -1,0 +1,50 @@
+2017-11-13 03:28:30 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "server". in /Users/ansvia_05/WebProject/devel/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /Users/ansvia_05/WebProject/devel/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('server', Array)
+#1 /Users/ansvia_05/WebProject/devel/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('server', Array)
+#2 /Users/ansvia_05/WebProject/devel/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /Users/ansvia_05/WebProject/devel/yii(27): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "server". in /Users/ansvia_05/WebProject/devel/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /Users/ansvia_05/WebProject/devel/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('server', Array)
+#1 /Users/ansvia_05/WebProject/devel/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /Users/ansvia_05/WebProject/devel/yii(27): yii\base\Application->run()
+#3 {main}
+2017-11-13 03:28:30 [-][-][-][info][application] $_SERVER = [
+    'TERM_PROGRAM' => 'Apple_Terminal'
+    'ANDROID_HOME' => '/Users/ansvia_05/Library/Android/sdk'
+    'SHELL' => '/bin/bash'
+    'TERM' => 'xterm-256color'
+    'TMPDIR' => '/var/folders/h9/rygff1x14n92c54x47whpc800000gn/T/'
+    'Apple_PubSub_Socket_Render' => '/private/tmp/com.apple.launchd.WmoaxV9zfo/Render'
+    'TERM_PROGRAM_VERSION' => '388.1.1'
+    'OLDPWD' => '/Users/ansvia_05'
+    'TERM_SESSION_ID' => '8FE290F0-7E74-4C1D-88EC-C6875652ECC5'
+    'USER' => 'ansvia_05'
+    'SSH_AUTH_SOCK' => '/private/tmp/com.apple.launchd.rz95DLnIPN/Listeners'
+    '__CF_USER_TEXT_ENCODING' => '0x1F5:0x0:0x0'
+    'PATH' => '/Users/ansvia_05/.composer/vendor/bin:/usr/local/sbin:/Users/ansvia_05/.fastlane/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ansvia_05/Library/Android/sdk/tools:/Users/ansvia_05/Library/Android/sdk/platform-tools:/Users/ansvia_05/Library/Android/sdk/ndk-bundle'
+    'PWD' => '/Users/ansvia_05/WebProject/devel'
+    'XPC_FLAGS' => '0x0'
+    'XPC_SERVICE_NAME' => '0'
+    'SHLVL' => '1'
+    'HOME' => '/Users/ansvia_05'
+    'LOGNAME' => 'ansvia_05'
+    'LC_CTYPE' => 'UTF-8'
+    'ANDROID_NDK' => '/Users/ansvia_05/Library/Android/sdk/ndk-bundle'
+    '_' => '/usr/local/bin/php'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1510543710.9205
+    'REQUEST_TIME' => 1510543710
+    'argv' => [
+        0 => 'yii'
+        1 => 'server'
+    ]
+    'argc' => 2
+]

@@ -1,0 +1,668 @@
+[07-Oct-2017 21:53:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[07-Oct-2017 21:53:07 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ga=GA1.2.1537950550.1496914850',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'UNIQUE_ID' => 'WdlMwjEbnnPRfZxCtmnnoAAAAck',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '36.80.200.176',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '49592',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507413186.882749080657958984375,
+    'REQUEST_TIME' => 1507413186,
+]
+[07-Oct-2017 21:53:14 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[07-Oct-2017 21:53:14 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'WhatsApp/0.2.5863 N',
+    'HTTP_X_CNECTION' => 'close',
+    'UNIQUE_ID' => 'WdlMyp2UdCknQveiZKCBogAAAQw',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '36.80.200.176',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '49594',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507413194.934111118316650390625,
+    'REQUEST_TIME' => 1507413194,
+]
+[07-Oct-2017 21:53:15 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[07-Oct-2017 21:53:15 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'WhatsApp/0.2.5863 N',
+    'HTTP_X_CNECTION' => 'close',
+    'UNIQUE_ID' => 'WdlMy52UdCknQveiZKCBpAAAAQM',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '36.80.200.176',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '49595',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507413195.0376689434051513671875,
+    'REQUEST_TIME' => 1507413195,
+]
+[07-Oct-2017 21:53:17 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[07-Oct-2017 21:53:17 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'WhatsApp/0.2.5863 N',
+    'HTTP_X_CNECTION' => 'close',
+    'UNIQUE_ID' => 'WdlMzU0EdWYjkDITwOdwCQAAAsA',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '36.80.200.176',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '49610',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507413197.169682025909423828125,
+    'REQUEST_TIME' => 1507413197,
+]
+[07-Oct-2017 21:55:27 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[07-Oct-2017 21:55:27 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8,id;q=0.6',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_COOKIE' => '_ga=GA1.2.1537950550.1496914850',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'UNIQUE_ID' => 'WdlNT52UdCknQveiZKCHaQAAAQ0',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '36.80.200.176',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '49593',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507413327.5958659648895263671875,
+    'REQUEST_TIME' => 1507413327,
+]
+[07-Oct-2017 21:56:30 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[07-Oct-2017 21:56:30 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 4.4.4; HM 1S Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.111 Mobile Safari/537.36',
+    'REDIRECT_UNIQUE_ID' => 'WdlNjZ2UdCknQveiZKCIWQAAARU',
+    'REDIRECT_STATUS' => '200',
+    'UNIQUE_ID' => 'WdlNjZ2UdCknQveiZKCIWQAAARU',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '202.67.46.1',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '37466',
+    'REDIRECT_URL' => '/web',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/web',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507413390.1720969676971435546875,
+    'REQUEST_TIME' => 1507413390,
+]
+[07-Oct-2017 21:56:38 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[07-Oct-2017 21:56:38 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Linux; Android 4.4.4; HM 1S Build/KTU84P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.111 Mobile Safari/537.36',
+    'UNIQUE_ID' => 'WdlNljEbnnPRfZxCtmnofAAAAc4',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '202.67.46.1',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '37470',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507413398.4205429553985595703125,
+    'REQUEST_TIME' => 1507413398,
+]
+[08-Oct-2017 13:35:47 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[08-Oct-2017 13:35:47 UTC] An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1355): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1338): yii\web\Request->loadCsrfToken()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseHtml.php(302): yii\web\Request->getCsrfToken()
+#4 /home/u7242437/public_html/devel/backend/views/layouts/main.php(22): yii\helpers\BaseHtml::csrfMetaTags()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(330): require('/home/u7242437/...')
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/home/u7242437/...', Array)
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(396): yii\base\View->renderFile('/home/u7242437/...', Array, Object(backend\controllers\SiteController))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(382): yii\base\Controller->renderContent('<div class="sit...')
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(128): yii\base\Controller->render('error', Array)
+#10 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorAction.php(107): yii\web\ErrorAction->renderHtmlResponse()
+#11 [internal function]: yii\web\ErrorAction->run()
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Action.php(94): call_user_func_array(Array, Array)
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(156): yii\base\Action->runWithParams(Array)
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('error', Array)
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/ErrorHandler.php(97): yii\base\Module->runAction('site/error')
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidConfigException))
+#17 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#18 {main}
+Previous exception:
+exception 'yii\base\InvalidConfigException' with message 'yii\web\Request::cookieValidationKey must be configured with a secret key.' in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php:1292
+Stack trace:
+#0 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Request.php(1274): yii\web\Request->loadCookies()
+#1 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(555): yii\web\Request->getCookies()
+#2 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(287): yii\web\User->getIdentityAndDurationFromCookie()
+#3 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(674): yii\web\User->loginByCookie()
+#4 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(188): yii\web\User->renewAuthStatus()
+#5 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/User.php(333): yii\web\User->getIdentity()
+#6 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(210): yii\web\User->getIsGuest()
+#7 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessRule.php(150): yii\filters\AccessRule->matchRole(Object(yii\web\User))
+#8 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/filters/AccessControl.php(121): yii\filters\AccessRule->allows(Object(yii\base\InlineAction), Object(yii\web\User), Object(yii\web\Request))
+#9 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/ActionFilter.php(75): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#10 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#11 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Component.php(545): call_user_func(Array, Object(yii\base\ActionEvent))
+#12 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(272): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#13 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#14 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Controller.php(154): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#15 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Module.php(523): yii\base\Controller->runAction('', Array)
+#16 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/web/Application.php(102): yii\base\Module->runAction('', Array)
+#17 /home/u7242437/public_html/devel/vendor/yiisoft/yii2/base/Application.php(380): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/u7242437/public_html/devel/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/usr/local/bin:/usr/bin:/bin',
+    'TEMP' => '/tmp',
+    'TMP' => '/tmp',
+    'TMPDIR' => '/tmp',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+    'HTTP_ACCEPT_LANGUAGE' => 'id-ID,id;q=0.8,en-US;q=0.6,en;q=0.4',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'CONTENT_LENGTH' => '0',
+    'HTTP_HOST' => 'admin.blibor.com',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'UNIQUE_ID' => 'WdopsgBaJu9djBfXIZOpAQAAAYU',
+    'SERVER_SIGNATURE' => '',
+    'SERVER_SOFTWARE' => 'Apache',
+    'SERVER_NAME' => 'admin.blibor.com',
+    'SERVER_ADDR' => '156.67.210.146',
+    'SERVER_PORT' => '80',
+    'REMOTE_ADDR' => '112.215.242.175',
+    'DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'REQUEST_SCHEME' => 'http',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/u7242437/public_html/devel/backend/web',
+    'SERVER_ADMIN' => 'webmaster@admin.blibor.com',
+    'SCRIPT_FILENAME' => '/home/u7242437/public_html/devel/backend/web/index.php',
+    'REMOTE_PORT' => '19340',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1507469746.74351406097412109375,
+    'REQUEST_TIME' => 1507469746,
+]
+[08-Oct-2017 13:36:37 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[08-Oct-2017 13:37:32 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[08-Oct-2017 13:37:35 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[08-Oct-2017 13:39:13 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/u7242437/public_html/devel/vendor/yiisoft/yii2/helpers/BaseArrayHelper.php on line 123
+[10-Oct-2017 14:16:38 UTC] PHP Fatal error:  Class 'common\models\GuideCategorySearch' not found in /home/u7242437/public_html/devel/backend/controllers/CategoryController.php on line 38
+[19-Oct-2017 11:57:29 Asia/Jakarta] PHP Fatal error:  Call to undefined method common\components\Helper::dateFormat() in /home/u7242437/public_html/devel/backend/views/manage-user/view.php on line 103
+[19-Oct-2017 05:08:46 UTC] PHP Fatal error:  Class 'Alert' not found in /home/u7242437/public_html/devel/backend/views/site/error.php on line 25
+[30-Oct-2017 14:17:20 Asia/Jakarta] PHP Fatal error:  Class 'common\models\GuideProsedur' not found in /home/u7242437/public_html/devel/backend/views/guide/_form.php on line 163
+[10-Nov-2017 02:25:06 Asia/Jakarta] PHP Fatal error:  Class 'yii\imagine\Image' not found in /home/u7242437/public_html/devel/backend/controllers/ProductController.php on line 106
+[10-Nov-2017 02:26:52 Asia/Jakarta] PHP Fatal error:  Class 'yii\imagine\Image' not found in /home/u7242437/public_html/devel/backend/controllers/ProductController.php on line 106
+[13-Nov-2017 01:11:40 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '{', expecting ']' in /home/u7242437/public_html/devel/backend/views/guide/_form.php on line 72
+[13-Nov-2017 01:11:40 Asia/Jakarta] PHP Parse error:  syntax error, unexpected '{', expecting ']' in /home/u7242437/public_html/devel/backend/views/guide/_form.php on line 72
+[14-Nov-2017 21:15:42 Asia/Jakarta] PHP Fatal error:  Class 'common\models\SubscriberSearch' not found in /home/u7242437/public_html/devel/backend/modules/subscriber/controllers/ListController.php on line 38
+[16-Nov-2017 21:31:24 Asia/Jakarta] PHP Fatal error:  Call to undefined method common\models\Brand::findOrderProductCat() in /home/u7242437/public_html/devel/backend/views/product-category/_form.php on line 123
